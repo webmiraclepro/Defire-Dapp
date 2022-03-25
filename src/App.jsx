@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import Account from "components/Account/Account";
 import Chains from "components/Chains";
-import TokenPrice from "components/TokenPrice";
+// import TokenPrice from "components/TokenPrice";
 import ERC20Balance from "components/ERC20Balance";
 import ERC20Transfers from "components/ERC20Transfers";
 import DEX from "components/DEX";
@@ -20,9 +20,10 @@ import NativeBalance from "components/NativeBalance";
 import "./style.css";
 import QuickStart from "components/QuickStart";
 import Contract from "components/Contract/Contract";
-import Text from "antd/lib/typography/Text";
+// import Text from "antd/lib/typography/Text";
 import Ramper from "components/Ramper";
-import MenuItems from "./components/MenuItems";
+import TokenBalance from "components/TokenBalance";
+// import MenuItems from "./components/MenuItems";
 const { Header, Footer } = Layout;
 
 const styles = {
@@ -71,15 +72,16 @@ const App = ({ isServerInfo }) => {
       <Router>
         <Header style={styles.header}>
           <Logo />
-          <MenuItems />
+          {/* <MenuItems /> */}
           <div style={styles.headerRight}>
             <Chains />
-            <TokenPrice
+            {/* <TokenPrice
               address="0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
               chain="eth"
               image="https://cloudflare-ipfs.com/ipfs/QmXttGpZrECX5qCyXbBQiqgQNytVGeZW5Anewvh2jc4psg/"
               size="40px"
-            />
+            /> */}
+            <TokenBalance tokenAddress="0x5425890298aed601595a70ab815c96711a31bc65" />
             <NativeBalance />
             <Account />
           </div>
@@ -134,7 +136,7 @@ const App = ({ isServerInfo }) => {
         </div>
       </Router>
       <Footer style={{ textAlign: "center" }}>
-        <Text style={{ display: "block" }}>
+        {/* <Text style={{ display: "block" }}>
           ⭐️ Please star this{" "}
           <a
             href="https://github.com/ethereum-boilerplate/ethereum-boilerplate/"
@@ -166,7 +168,7 @@ const App = ({ isServerInfo }) => {
           >
             Moralis
           </a>
-        </Text>
+        </Text> */}
       </Footer>
     </Layout>
   );
